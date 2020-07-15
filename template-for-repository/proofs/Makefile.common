@@ -538,6 +538,9 @@ report2: $(LOGDIR)/result.xml $(LOGDIR)/property.xml $(LOGDIR)/coverage.xml
 	  --tags "stats-group:report generation" \
 	  --description "$(HARNESS_ENTRY): generating report"
 
+litani-path:
+	@echo $(LITANI)
+
 ################################################################
 # Targets to clean up after ourselves
 clean:
@@ -549,7 +552,7 @@ veryclean: clean
 	-$(RM) -r html report
 	-$(RM) -r $(LOGDIR) $(GOTODIR)
 
-.PHONY: setup_dependencies result property coverage report clean veryclean testdeps
+.PHONY: setup_dependencies result property coverage report clean veryclean testdeps litani-path
 
 ################################################################
 
